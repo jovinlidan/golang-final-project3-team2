@@ -216,10 +216,10 @@
 							}
 						},
 						"url": {
-							"raw": "https://golang-final-project2-team2-production.up.railway.app/api/categories",
+							"raw": "https://golang-final-project3-team2-production.up.railway.app/api/categories",
 							"protocol": "https",
 							"host": [
-								"golang-final-project2-team2-production",
+								"golang-final-project3-team2-production",
 								"up",
 								"railway",
 								"app"
