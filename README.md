@@ -16,6 +16,7 @@ Anggota Kelompok :
   - Helper_test : TestSuccessGenerateToken, TestFailedGenerateToken, TestSuccessComparePass, TestFailedComparePass, TestSuccessHashPass, TestFailedHashPass
 - GUSTIO NUSAMBA (GLNG-KS04-025)
   Mengerjakan :
+    - Semua API Task dan Postman task
 
 ## Cara Install
 
@@ -45,3 +46,11 @@ Password  : admin12
 - **`POST`- Categories Store `api/categories`**, Digunakan untuk membuat category baru.
 - **`PATCH`- Categories Update `api/categories/:categoryId`**, Digunakan untuk mengubah data category berdasarkan idnya.
 - **`DELETE`- Categories Delete `api/categories/:categoryId`**, Digunakan untuk menghapus data category berdasarkan idnya.
+
+### Tasks
+- **`GET`- Tasks Index `api/tasks`**, Digunakan untuk mengambil seluruh data tasks dari database.
+- **`POST`- Tasks Store `api/tasks`**, Digunakan untuk membuat task baru.
+- **`PUT`- Tasks Update `api/tasks/:taskId`**, Digunakan untuk mengubah data task berdasarkan idnya.
+- **`PATCH`- Tasks Update Status `api/tasks/update-status/:taskId`**, Digunakan untuk mengubah status task berdasarkan idnya.
+- **`PATCH`- Tasks Update Category `api/tasks/update-category/:taskId`**, Digunakan untuk mengubah category task berdasarkan idnya.
+- **`DELETE`- Tasks Delete `api/tasks/:taskId`**, Digunakan untuk menghapus data task berdasarkan idnya.
