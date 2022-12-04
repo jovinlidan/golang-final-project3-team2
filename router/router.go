@@ -3,6 +3,7 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"golang-final-project3-team2/controllers/category_controllers"
+	"golang-final-project3-team2/controllers/task_controllers"
 	"golang-final-project3-team2/controllers/user_controllers"
 	"golang-final-project3-team2/db"
 	"golang-final-project3-team2/middlewares"
@@ -37,6 +38,17 @@ func StartRouter() {
 			categoryRouter.POST("/", category_controllers.CreateCategory)
 			categoryRouter.PATCH("/:categoryId", category_controllers.UpdateCategory)
 			categoryRouter.DELETE("/:categoryId", category_controllers.DeleteCategory)
+		}
+
+		taskRouter := apiRouter.Group("/tasks")
+		{
+			taskRouter.Use(middlewares.MiddlewareAuth())
+			taskRouter.GET("/", task_controllers.GetTasks)
+			taskRouter.POST("/", task_controllers.CreateTask)
+			taskRouter.PUT("/:taskId", task_controllers.UpdateTask)
+			taskRouter.PATCH("/update-category/:taskId", task_controllers.UpdateCategoryTask)
+			taskRouter.PATCH("/update-status/:taskId", task_controllers.UpdateStatusTask)
+			taskRouter.DELETE("/:taskId", task_controllers.DeleteTask)
 		}
 	}
 
